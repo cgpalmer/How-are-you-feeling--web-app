@@ -1,4 +1,4 @@
-$(".item1").click(function(){
+$(".grid-container div").click(function(){
     $(this).css("background-color", "red");
 });
 
