@@ -5,6 +5,15 @@
 }
 body {
     background-color: #929292;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.click-border {
+    border: 1px solid white;
+}
+
+.fas, .fa-check {
+    margin-left: 5px;
 }
 
 /*----Grid area names----*/
@@ -24,6 +33,7 @@ body {
 .item14 {grid-area: negative;}
 .item15 {grid-area: determined;}
 .item16 {grid-area: tired;}
+.item17 {grid-area: sub-header;}
 
 /*-----Default grid layout and generic settings---*/
 
@@ -39,7 +49,6 @@ body {
     'determined tired'
     'result result';
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 2vh;
     background-color: #929292;
     text-align: center;
@@ -51,25 +60,48 @@ body {
     background-color: green;
     color: white;
     padding: 10px;
-  /*  height: 10vh;*/
+    height: 10.2vh;
+    text-align: center;
+
 }
 
-.grid-container>.header, 
-.grid-container>.footer {
-  /*  height: 10.5vh;*/
+.grid-container h3 {
+    font-weight: normal;
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
-.result-button {
-    margin-top: 0;
+p {
+    display: inline-block;
+    padding: 12px 0;
+    margin: 0;
+}
+
+.grid-container .footer {
+    height: 10.6vh;
+    padding: 5px 10px;
+}
+
+.footer p {
+    padding: 0;
+    margin:0;
+}
+
+.btn{
+    padding: 3px 12px;
 }
 
 .results-link {
     text-decoration: none;
     color: white;
+    vertical-align: middle;
+   
 }
 
 .btn-secondary{
     background-color: #929292;
+    margin-top: 12px;
 }
 
 .btn-secondary a:hover{
@@ -78,52 +110,57 @@ body {
 }
 
 
+
+
 /*-----Results page-----*/
 .grid-container-results {
   display: grid;
   grid-template-areas:
-    'header' 'happy' 'angry' 'excited' 
-    'frustrated' 'sick'
-    'proud' 'nervous'
-    'disappointed' 'ecstatic' 'sad'
+    'header header'
+    'positive negative'
+    'sub-header sub-header'
+    'happy angry' 
+    'excited frustrated' 
+    'sick proud'
+    'nervous disappointed' 
+    'ecstatic sad'
+    'tired determined'
+
     ;
-    grid-template-columns: 1fr;
-    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2vh;
     background-color: #929292;
     text-align: center;
-    padding: 10px;
-    margin: 1rem;
+    padding: 2vh;
+    margin: 0;
 }
 
 .grid-container-results>div {
     background-color: green;
     color: white;
     padding: 10px;
+    height: 5.88vh;
 }
 
-.grid-container-results-total {
-    display: grid;
-    grid-template-areas:
-    'positive negative'
-    ;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
-
-
-    text-align: center;
-    padding: 10px;
-    margin: 1rem;
+.grid-container-results h2 {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    font-weight: normal;
 }
 
-.grid-container-results-total>div {
-    background-color: green;
-    color: white;
-    padding: 10px;
+.grid-container-results h3 {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-weight: normal;
 }
 
+.grid-container-results p {
+    padding: 0;
+}
 /*---Media Queries - Alternative layout---*/
 
 @media only screen and (min-width: 768px) { /*ipad/mini portrait*/
+ 
   .item1 { grid-area: 1 / 1 / 1 / 4; } /*row 1 - 1, column 1-4*/
   .item2 { grid-area: 2 / 1 / 2 / 2; } /*row 2, column 1*/
   .item3 { grid-area: 2 / 2 / 2 / 3; } /*row 2, column 2*/
@@ -142,12 +179,28 @@ body {
 
     .grid-container {
         grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 20px;
-        padding: 20px;
+        grid-gap: 3vh;
+        padding: 3vh;
+}
+    .grid-container>div {
+         height: 13.6vh;
 }
 
-    .grid-container>div {
-         height: 14.5vh;
+.grid-container h3 {
+    font-size: 350%;
+    padding-top: 23px;
+    padding-bottom: 23px;
+}
+
+.grid-container p {
+    font-size: 200%;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.grid-container .btn {
+    font-size: 200%;
+    margin-top: 16px;
 }
 }
 
@@ -169,38 +222,89 @@ body {
 
 .grid-container {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 35px;
-    padding: 35px;
-    grid-template-rows: auto auto auto auto auto;
+    grid-gap: 3vh;
+    padding: 3vh;
+    
 }
 .grid-container>div {
-    height: 18vh;
+    height: 16.4vh;
 }
 
 .grid-container .item12 {
-    height: 38.5vh!important;
+    height: 36.8vh!important;
+}
+
+.grid-container h3 {
+    font-size: 450%;
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+
+
+.grid-container p {
+    font-size: 200%;
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+.grid-container .btn {
+    font-size: 500%;
+    margin-top: 170px;
+}
+
 }
 
 @media (min-width: 1024px) and (max-height: 769px) {  /*ipad/mini landscape*/
     .grid-container {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 20px;
-        padding: 20px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 3vh;
+        padding: 3vh;
 }
 
     .grid-container>div {
-         height: 13.75vh;
+          height: 16.4vh;
+}
+
+.grid-container h3 {
+    font-size: 450%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+
+.grid-container p {
+    font-size: 200%;
+    padding-top: 27px;
+    padding-bottom: 27px;
+}
+
+.grid-container .btn {
+    font-size: 500%;
+    margin-top: 68px;
 }
 }
 
+@media (min-width: 1366px) and (max-height: 1024px) {  /*ipad/mini landscape*/
+.grid-container h3 {
+    padding-top: 27.5px;
+    padding-bottom: 27.5px;
+}
 
+.grid-container p {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
 
-
-
-
-
+.grid-container .btn {
+    margin-top: 110px;
+}
 
 }
+
+
+
+
+
 
 
 
