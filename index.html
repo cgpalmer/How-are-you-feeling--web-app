@@ -10,35 +10,47 @@
     <title>How are you feeling?</title>
 </head>
 <body>
-    <div class="grid-container">
+    <div id="grid" class="grid-container">
         <div class="item1 header"><h3>How are you feeling?</h3></div>
-        <div id="happy" class="emotions item2"><p>Happy: </p></div>
-        <div class="emotions item3"><p>Sad: </p></div>
-        <div class="emotions item4"><p>Angry: </p></div>
-        <div class="emotions item5"><p>Excited</p></div>
-        <div class="emotions item6"><p>Frustrated</p></div>
-        <div class="emotions item7"><p>Sick</p></div>
-        <div class="emotions item8"><p>Proud</p></div>
-        <div class="emotions item9"><p>Disappointed</p></div>
-        <div class="emotions item10"><p>Ecstatic</p></div>
-        <div class="emotions item11"><p>Nervous</p></div>
+        <div class="emotions positive-emotions item2"><p>Happy </p></div>
+        <div class="emotions negative-emotions item3"><p>Sad</p></div>
+        <div class="emotions negative-emotions item4"><p>Angry </p></div>
+        <div class="emotions positive-emotions item5"><p>Excited</p></div>
+        <div class="emotions negative-emotions item6"><p>Frustrated</p></div>
+        <div class="emotions negative-emotions item7"><p>Sick</p></div>
+        <div class="emotions positive-emotions item8"><p>Proud</p></div>
+        <div class="emotions negative-emotions item9"><p>Disappointed</p></div>
+        <div class="emotions positive-emotions item10"><p>Ecstatic</p></div>
+        <div class="emotions negative-emotions item11"><p>Nervous</p></div>
         <div class="item12 footer">
             <div class="result-button">
-                <button id="button" type="button" class="btn btn-secondary"><a href="results.html" class="results-link">Results!</a></button>
+                <button id="button" type="button" class="btn btn-secondary">Results!</button>
             </div>
         </div>
-        <div class="emotions item15"><p>Determined</p></div>
-        <div class="emotions item16"><p>Tired</p></div>
-        <div class="item13"><p>Positive feelings: <br>1</p></div>
-        <div class="item14"><p>Negative feelings: <br>1</p></div>    
+        <div class="emotions positive-emotions item15"><p>Determined</p></div>
+        <div class="emotions negative-emotions item16"><p>Tired</p></div>
+        <div id="positive" class="results item13"><p>Positive feelings: </p></div>
+        <div id="negative" class="results item14"><p>Negative feelings: </p></div>
+        <div class="item17 breakdown">
+            <div id="bdown-button" class="breakdown-button">
+                <button type="button" class="btn btn-secondary">Breakdown</button>
+            </div>
+        </div>   
     </div>
-<div class="main">
- 
-    
- 
-
-
-  </div>
+    <div id="results-grid" class="grid-container-results-show d-none">
+        <div class="item18"><p>Happy: </p></div>
+        <div class="item19"><p>Sad: </p></div>
+        <div class="item20"><p>Angry: </p></div>
+        <div class="item21"><p>Excited:</p></div>
+        <div class="item22"><p>Frustrated:</p></div>
+        <div class="item23"><p>Sick:</p></div>
+        <div class="item24"><p>Proud:</p></div>
+        <div class="item25"><p>Disappointed:</p></div>
+        <div class="item26"><p>Ecstatic:</p></div>
+        <div class="item27"><p>Nervous:</p></div>
+        <div class="item28"><p>Determined:</p></div>
+        <div class="item29"><p>Tired:</p></div>
+    </div>
 <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>

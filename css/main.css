@@ -10,7 +10,6 @@ body {
 
 .click-border {
     border: 1px solid white;
-    background-color: white!important;
 }
 
 .emotions:active {
@@ -18,6 +17,7 @@ body {
     background-color: rgb(0, 121, 0);
     
 }
+
 .fas, .fa-check {
     margin-left: 5px;
 }
@@ -39,7 +39,19 @@ body {
 .item14 {grid-area: negative;}
 .item15 {grid-area: determined;}
 .item16 {grid-area: tired;}
-.item17 {grid-area: sub-header;}
+.item17 {grid-area: breakdown;}
+.item18 { grid-area: result-happy; }
+.item19 { grid-area: result-sad; }
+.item20 { grid-area: result-angry; }
+.item21 { grid-area: result-excited; }
+.item22 { grid-area: result-frustrated; }
+.item23 { grid-area: result-sick; }
+.item24 { grid-area: result-proud; }
+.item25 { grid-area: result-disappointed; }
+.item26 { grid-area: result-ecstatic; }
+.item27 { grid-area: result-nervous; }
+.item28 {grid-area: result-determined;}
+.item29 {grid-area: result-tired;}
 
 /*-----Default grid layout and generic settings---*/
 
@@ -54,7 +66,8 @@ body {
     'disappointed ecstatic'
     'determined tired'
     'result result'
-    'positive negative';
+    'positive negative'
+    'breakdown breakdown';
     grid-template-columns: 1fr 1fr;
     grid-gap: 2vh;
     background-color: #929292;
@@ -71,6 +84,52 @@ body {
     text-align: center;   
 }
 
+.grid-container-after-result {
+  display: grid;
+  grid-template-areas:
+    'positive negative'
+    'breakdown breakdown';
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2vh;
+    background-color: #929292;
+    text-align: center;
+    padding: 2vh;
+    margin: 0;
+}
+
+.grid-container-after-result>div {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    height: 10.2vh;
+    text-align: center;   
+}
+
+.grid-container-results-show {
+  display: grid;
+  grid-template-areas:
+    'result-happy result-sad'
+    'result-angry result-excited' 
+    'result-frustrated result-sick'
+    'result-proud result-nervous'
+    'result-disappointed result-ecstatic'
+    'result-determined result-tired'
+    ;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2vh;
+    background-color: #929292;
+    text-align: center;
+    padding: 0 2vh 2vh 2vh;
+    margin: 0;
+}
+
+.grid-container-results-show>div {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    height: 10.2vh;
+    text-align: center;   
+}
 
 
 
@@ -83,7 +142,7 @@ body {
 
 p {
     display: inline-block;
-    padding: 12px 0;
+    padding-top: 8px;
     margin: 0;
 }
 
@@ -118,6 +177,13 @@ p {
     color: white;
 }
 
+.results {
+    display:none;
+}
+
+.breakdown {
+    display:none;
+}
 
 
 
